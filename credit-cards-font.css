@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Credit-Cards';
+	src: url('fonts/Credit-Cards.eot?-mdfr6');
+	src: url('fonts/Credit-Cards.eot?#iefix-mdfr6') format('embedded-opentype'), url('fonts/Credit-Cards.woff?-mdfr6') format('woff'), url('fonts/Credit-Cards.ttf?-mdfr6') format('truetype'), url('fonts/Credit-Cards.svg?-mdfr6#Credit-Cards') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="cc-"] {
+	font-family: 'Credit-Cards';
+	speak: none;
+	font-size: 54px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+.cc-stack {
+	position: relative;
+	display: inline-block;
+	width: 86px;
+	height: 54px;
+	line-height: 1em;
+	vertical-align: middle;
+}
+.cc-amex,
+.cc-discover,
+.cc-mastercard,
+.cc-paypal,
+.cc-visa {
+	border: 1px #ccc solid;
+	border-radius: 2px;
+}
+.cc-amex-1:before {
+	content: "\cc001";
+	color: #fff;
+}
+.cc-amex-2:before {
+	content: "\cc002";
+	color: #3078bc;
+}
+.cc-amex-3:before {
+	content: "\cc003";
+	color: #3078bc;
+	margin-top: -2px;
+}
+.cc-amex-4:before {
+	content: "\cc004";
+	color: #fff;
+}
+.cc-discover-1:before {
+	content: "\cc005";
+	color: #000;
+}
+.cc-discover-2:before {
+	content: "\cc006";
+	color: #fc6604;
+	background-image: rgb(255, 255, 255);
+	background-image: -webkit-radial-gradient(51.5% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%);
+	background-image: -radial-gradient(at 51.5% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%);
+	-webkit-background-clip: text;
+	-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-text-fill-color: transparent;
+}
+.cc-discover-3:before {
+	content: "\cc007";
+	color: #fc6604;
+	background-image: rgb(255, 255, 255);
+	background-image: -webkit-linear-gradient(rgba(253, 203, 171, 1) 30%, rgba(252, 102, 4, 1) 100%);
+	background-image: -linear-gradient(rgba(253, 203, 171, 1) 30%, rgba(252, 102, 4, 1) 100%);
+	-webkit-background-clip: text;
+	-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-text-fill-color: transparent;
+}
+.cc-mastercard-1:before {
+	content: "\cc009";
+	color: #fff;
+}
+.cc-mastercard-2:before {
+	content: "\cc010";
+	color: #000066;
+}
+.cc-mastercard-3:before {
+	content: "\cc011";
+	color: #cc0000;
+}
+.cc-mastercard-4:before {
+	content: "\cc012";
+	color: #ff9900;
+}
+.cc-paypal-1:before {
+	content: "\cc013";
+	color: #1c3665;
+}
+.cc-paypal-2:before {
+	content: "\cc014";
+	color: #34679a;
+}
+.cc-visa-1:before {
+	content: "\cc015";
+	color: #002295;
+}
+.cc-visa-2:before {
+	content: "\cc016";
+	color: #fb9905;
+}
+.cc-black {
+	color: #000 !important;
+}
+.cc-white {
+	color: #fff !important;
+}
