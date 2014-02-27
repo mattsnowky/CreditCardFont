@@ -33,6 +33,7 @@
 	vertical-align: middle;
 }
 .cc-amex,
+.cc-bitcoin,
 .cc-discover,
 .cc-mastercard,
 .cc-paypal,
@@ -56,6 +57,18 @@
 .cc-amex-4:before {
 	content: "\cc004";
 	color: #fff;
+}
+.cc-bitcoin-1:before {
+	content: "\cc017";
+	color:#fff;
+}
+.cc-bitcoin-2:before {
+	content: "\cc018";
+	color:#f7931a;
+}
+.cc-bitcoin-3:before {
+	content: "\cc019";
+	color:#4d4d4d;
 }
 .cc-discover-1:before {
 	content: "\cc005";
