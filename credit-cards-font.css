@@ -32,14 +32,36 @@
 	line-height: 1em;
 	vertical-align: middle;
 }
+.cc-ach,
 .cc-amex,
 .cc-bitcoin,
 .cc-discover,
 .cc-mastercard,
 .cc-paypal,
 .cc-visa {
-	border: 1px #ccc solid;
-	border-radius: 2px;
+	border: 1px #aaa solid;
+	border-radius: 1px;
+	background-color: #fff;
+}
+.cc-ach-1:before {
+	content: "\cc020";
+	color: #6D996D;
+}
+.cc-ach-2:before {
+	content: "\cc021";
+	color: #446344;
+}
+.cc-ach-3:before {
+	content: "\cc022";
+	color: #497049;
+}
+.cc-ach-4:before {
+	content: "\cc023";
+	color: #333;
+}
+.cc-ach-5:before {
+	content: "\cc024";
+	color: #ccc;
 }
 .cc-amex-1:before {
 	content: "\cc001";
@@ -52,7 +74,6 @@
 .cc-amex-3:before {
 	content: "\cc003";
 	color: #3078bc;
-	margin-top: -2px;
 }
 .cc-amex-4:before {
 	content: "\cc004";
@@ -60,15 +81,15 @@
 }
 .cc-bitcoin-1:before {
 	content: "\cc017";
-	color:#fff;
+	color: #fff;
 }
 .cc-bitcoin-2:before {
 	content: "\cc018";
-	color:#f7931a;
+	color: #F7931A;
 }
 .cc-bitcoin-3:before {
 	content: "\cc019";
-	color:#4d4d4d;
+	color: #4D4D4D;
 }
 .cc-discover-1:before {
 	content: "\cc005";
@@ -78,8 +99,10 @@
 	content: "\cc006";
 	color: #fc6604;
 	background-image: rgb(255, 255, 255);
-	background-image: -webkit-radial-gradient(51.5% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%);
-	background-image: -radial-gradient(at 51.5% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%);
+/*	background-image: -moz-radial-gradient(at 52% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%); NO SUPPORT FOR CLIPPING */
+	background-image: -webkit-radial-gradient(52% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%);
+	background-image: -radial-gradient(at 52% 40%, rgba(253, 203, 171, 1) 2%, rgba(252, 102, 4, 1) 10%);
+/*	-moz-background-clip: text; NO SUPPORT FOR CLIPPING */
 	-webkit-background-clip: text;
 	-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -89,8 +112,10 @@
 	content: "\cc007";
 	color: #fc6604;
 	background-image: rgb(255, 255, 255);
+/* 	background-image: -moz-linear-gradient(rgba(253, 203, 171, 1) 30%, rgba(252, 102, 4, 1) 100%); NO SUPPORT FOR CLIPPING */
 	background-image: -webkit-linear-gradient(rgba(253, 203, 171, 1) 30%, rgba(252, 102, 4, 1) 100%);
 	background-image: -linear-gradient(rgba(253, 203, 171, 1) 30%, rgba(252, 102, 4, 1) 100%);
+/*	-moz-background-clip: text; NO SUPPORT FOR CLIPPING */
 	-webkit-background-clip: text;
 	-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -128,9 +153,128 @@
 	content: "\cc016";
 	color: #fb9905;
 }
-.cc-black {
-	color: #000 !important;
+
+/* ================================= HIDDEN & SCREEN READERS  ================================= */
+
+
+.hidden, .hidden abbr {
+	display: none;
 }
-.cc-white {
-	color: #fff !important;
+
+.sr-only, .sr-only abbr {
+speak: normal;
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0,0,0,0);
+border: 0;
+}
+
+/* ================================= DISABLED ATTRIBUTE  ================================= */
+
+[class^="cc-"][disabled] {
+	cursor: not-allowed;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+[class^="cc-"][disabled] [class^="cc-"]:before {
+	color: #dedede;
+}
+
+[class^="cc-"][disabled] [class^="cc-"]:before {
+	opacity: .5;
+}
+
+[class^="cc-"][disabled] .cc-amex-1:before,
+[class^="cc-"][disabled] .cc-bitcoin-1:before,
+[class^="cc-"][disabled] .cc-mastercard-1:before {
+	color: rgba(255, 255, 255, 0.6);
+	opacity: .8;
+}
+
+[class^="cc-"][disabled] .cc-amex-4:before {
+color: rgba(255, 255, 255, 0);
+}
+
+[class^="cc-"][disabled] .cc-ach-1:before,
+[class^="cc-"][disabled] .cc-amex-2:before,
+[class^="cc-"][disabled] .cc-amex-3:before,
+[class^="cc-"][disabled] .cc-mastercard-2:before,
+[class^="cc-"][disabled] .cc-paypal-2:before {
+	color: #bebebe;
+	color: rgb(190, 190, 190);
+	opacity: .6;
+}
+[class^="cc-"][disabled] .cc-ach-2:before,
+[class^="cc-"][disabled] .cc-ach-4:before,
+[class^="cc-"][disabled] .cc-bitcoin-3:before,
+[class^="cc-"][disabled] .cc-discover-1:before,
+[class^="cc-"][disabled] .cc-mastercard-3:before,
+[class^="cc-"][disabled] .cc-paypal-1:before,
+[class^="cc-"][disabled] .cc-visa-1:before {
+	color: #b3b3b3;
+	color: rgb(179, 179, 179);
+	opacity: .5;
+}
+[class^="cc-"][disabled] .cc-discover-2:before {
+	color: #dedede;
+	background-image: -webkit-radial-gradient(52% 40%, rgba(225, 225, 225, 1) 2%, rgba(179, 179, 179, 1) 10%);
+/*	background: -ms-radial-gradient(52%, 40%, ellipse cover, rgba(225,225,225,1) 2%,rgba(179,179,179,1) 10%); NO BACKGROUND CLIPPING FOR IE */
+	background-image: -radial-gradient(at 52% 40%, rgba(225, 225, 225, 1) 2%, rgba(179, 179, 179, 1) 10%);
+	opacity: .5;
+}
+[class^="cc-"][disabled] .cc-discover-3:before {
+	color: #dedede;
+	background-image: -webkit-linear-gradient(rgba(225, 225, 225, 1) 30%, rgba(179, 179, 179, 1) 100%);
+/*	background: -ms-linear-gradient(top, rgba(225,225,225,1) 30%,rgba(179,179,179,1) 100%); NO BACKGROUND CLIPPING FOR IE*/
+	background-image: -linear-gradient(rgba(225, 225, 225, 1) 30%, rgba(179, 179, 179, 1) 100%);
+	opacity: .5;
+}
+/* ================================= MUTED CLASS  ================================= */
+
+.muted[class^="cc-"] [class^="cc-"]:before {
+	color: #dedede;
+}
+.muted[class^="cc-"] .cc-amex-1:before,
+.muted[class^="cc-"] .cc-amex-4:before,
+.muted[class^="cc-"] .cc-bitcoin-1:before,
+.muted[class^="cc-"] .cc-mastercard-1:before {
+	color: #fff;
+}
+.muted[class^="cc-"] .cc-ach-1:before,
+.muted[class^="cc-"] .cc-amex-2:before,
+.muted[class^="cc-"] .cc-amex-3:before,
+.muted[class^="cc-"] .cc-mastercard-2:before,
+.muted[class^="cc-"] .cc-paypal-2:before {
+	color: #bebebe;
+	color: rgb(190, 190, 190);
+}
+.muted[class^="cc-"] .cc-ach-2:before,
+.muted[class^="cc-"] .cc-ach-4:before,
+.muted[class^="cc-"] .cc-bitcoin-3:before,
+.muted[class^="cc-"] .cc-discover-1:before,
+.muted[class^="cc-"] .cc-mastercard-3:before,
+.muted[class^="cc-"] .cc-paypal-1:before,
+.muted[class^="cc-"] .cc-visa-1:before {
+	color: #b3b3b3;
+	color: rgb(179, 179, 179);
+}
+.muted[class^="cc-"] .cc-discover-2:before {
+	color: #dedede;
+	background-image: -webkit-radial-gradient(52% 40%, rgba(225, 225, 225, 1) 2%, rgba(179, 179, 179, 1) 10%);
+	background-image: -radial-gradient(at 52% 40%, rgba(225, 225, 225, 1) 2%, rgba(179, 179, 179, 1) 10%);
+}
+.muted[class^="cc-"] .cc-discover-3:before {
+	color: #dedede;
+	background-image: -webkit-linear-gradient(rgba(225, 225, 225, 1) 30%, rgba(179, 179, 179, 1) 100%);
+	background-image: -linear-gradient(rgba(225, 225, 225, 1) 30%, rgba(179, 179, 179, 1) 100%);
+}
+
+/* ================================= READ ONLY ATTRIBUTE  ================================= */
+
+[class^="cc-"][readonly] {
+	cursor: not-allowed;
 }
